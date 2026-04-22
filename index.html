@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TypeRush Quest</title>
+    <meta
+      name="description"
+      content="A 3D isometric medieval chase game where typing controls survival."
+    />
+  </head>
+  <body>
+    <div id="app">
+      <div id="game-layer" aria-hidden="true"></div>
+
+      <div id="ui-layer">
+        <section class="status-chip">
+          <span id="status-summary">WPM 0 | ACC 100%</span>
+          <span id="status-detail">GAP 0m | COMBO x1 | FOREST</span>
+        </section>
+
+        <section class="typing-band">
+          <div class="typing-meta">
+            <span id="timer-value">30.0s</span>
+            <span id="state-value">RUN</span>
+            <span id="pickup-value">Shield 0</span>
+          </div>
+          <p id="typing-text" aria-live="polite"></p>
+        </section>
+
+        <input
+          id="typing-input"
+          class="typing-input"
+          type="text"
+          autocapitalize="off"
+          autocomplete="off"
+          autocorrect="off"
+          spellcheck="false"
+          aria-label="Typing input"
+        />
+
+        <section id="results-panel" class="results-panel hidden">
+          <h1>Run Complete</h1>
+          <p id="result-rank" class="result-rank"></p>
+          <div class="results-grid">
+            <div><span>WPM</span><strong id="result-wpm">0</strong></div>
+            <div><span>Accuracy</span><strong id="result-accuracy">0%</strong></div>
+            <div><span>Score</span><strong id="result-score">0</strong></div>
+            <div><span>Max Combo</span><strong id="result-combo">0</strong></div>
+          </div>
+          <div class="pbs">
+            <p id="pb-wpm">Best WPM: 0</p>
+            <p id="pb-accuracy">Best Accuracy: 0%</p>
+            <p id="pb-combo">Best Combo: 0</p>
+            <p id="pb-score">Best Score: 0</p>
+          </div>
+          <button id="play-again-btn" type="button">Play Again</button>
+        </section>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
